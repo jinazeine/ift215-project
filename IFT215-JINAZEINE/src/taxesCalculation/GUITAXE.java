@@ -28,18 +28,92 @@ public class GUITAXE extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        pnlEmployeeInformation = new javax.swing.JPanel();
+        lblYearlySalary = new javax.swing.JLabel();
+        txtYearlySalary = new javax.swing.JTextField();
+        lblEmployeeInformation = new javax.swing.JLabel();
+        pnlTaxesAmount = new javax.swing.JPanel();
+        lblTaxesAmount = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        pnlEmployeeInformation.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        lblYearlySalary.setText("  Yearly Salary:");
+
+        javax.swing.GroupLayout pnlEmployeeInformationLayout = new javax.swing.GroupLayout(pnlEmployeeInformation);
+        pnlEmployeeInformation.setLayout(pnlEmployeeInformationLayout);
+        pnlEmployeeInformationLayout.setHorizontalGroup(
+            pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEmployeeInformationLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(319, Short.MAX_VALUE))
+        );
+        pnlEmployeeInformationLayout.setVerticalGroup(
+            pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEmployeeInformationLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblYearlySalary)
+                    .addComponent(txtYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(97, Short.MAX_VALUE))
+        );
+
+        lblEmployeeInformation.setText("   Employee Information");
+
+        pnlTaxesAmount.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
+
+        javax.swing.GroupLayout pnlTaxesAmountLayout = new javax.swing.GroupLayout(pnlTaxesAmount);
+        pnlTaxesAmount.setLayout(pnlTaxesAmountLayout);
+        pnlTaxesAmountLayout.setHorizontalGroup(
+            pnlTaxesAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        pnlTaxesAmountLayout.setVerticalGroup(
+            pnlTaxesAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        lblTaxesAmount.setText("   Taxes Amount");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlTaxesAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(pnlEmployeeInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEmployeeInformation)
+                            .addComponent(lblTaxesAmount, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(lblEmployeeInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlEmployeeInformation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblTaxesAmount)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pnlTaxesAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
+
+        pnlEmployeeInformation.getAccessibleContext().setAccessibleName("Employee Information");
+        pnlEmployeeInformation.getAccessibleContext().setAccessibleDescription("");
+        pnlTaxesAmount.getAccessibleContext().setAccessibleName("taxes Amount");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -80,5 +154,11 @@ public class GUITAXE extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel lblEmployeeInformation;
+    private javax.swing.JLabel lblTaxesAmount;
+    private javax.swing.JLabel lblYearlySalary;
+    private javax.swing.JPanel pnlEmployeeInformation;
+    private javax.swing.JPanel pnlTaxesAmount;
+    private javax.swing.JTextField txtYearlySalary;
     // End of variables declaration//GEN-END:variables
 }

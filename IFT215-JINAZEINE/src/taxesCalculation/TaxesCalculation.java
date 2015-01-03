@@ -35,14 +35,28 @@ public void setNbKids(int nbKids){
 
 public int getTaxesAmount(){
     int taxesAmount;
+    int taxedAmount;
     int abatement;
-    
+    int newTaxedAmount;
+    int tax;
     if (married==true){
         abatement=7500000+2500000+nbKids*500000;
     } else{
         abatement=7500000;
     }
-    taxesAmount=yearly
+    taxedAmount=yearlySalary-abatement;
+    
+    if (taxedAmount>6000000){
+        tax=6000000*2/100;
+        newTaxedAmount=taxedAmount-6000000;
+    } else { taxesAmount=0;}
+    if (newTaxedAmount>9000000){
+        tax=9000000*4/100;
+        newTaxedAmount=taxedAmount-(6000000+9000000);
+            
+    } else {tax=newTaxedAmount}
+    
+      
         
             
        
