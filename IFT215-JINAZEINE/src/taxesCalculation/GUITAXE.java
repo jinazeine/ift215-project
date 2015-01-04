@@ -47,6 +47,12 @@ public class GUITAXE extends javax.swing.JFrame {
 
         lblYearlySalary.setText("  Yearly Salary:");
 
+        txtYearlySalary.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtYearlySalaryActionPerformed(evt);
+            }
+        });
+
         chkMarried.setText("Married");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5" }));
@@ -71,7 +77,6 @@ public class GUITAXE extends javax.swing.JFrame {
                         .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(chkMarried))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlEmployeeInformationLayout.createSequentialGroup()
@@ -90,10 +95,11 @@ public class GUITAXE extends javax.swing.JFrame {
                     .addComponent(lblYearlySalary)
                     .addComponent(txtYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(chkMarried)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNbKids))
+                .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblNbKids)
+                    .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(chkMarried)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnSubmit)
                 .addContainerGap(15, Short.MAX_VALUE))
@@ -173,6 +179,10 @@ public class GUITAXE extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
+    private void txtYearlySalaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtYearlySalaryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtYearlySalaryActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -206,6 +216,10 @@ public class GUITAXE extends javax.swing.JFrame {
                 new GUITAXE().setVisible(true);
             }
         });
+        
+        
+        
+       
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

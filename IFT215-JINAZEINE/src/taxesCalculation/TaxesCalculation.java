@@ -38,7 +38,7 @@ public int getTaxesAmount(){
     int taxedAmount;
     int abatement;
     int newTaxedAmount;
-    int tax;
+    int t1,t2,t3,t4,t5,t6,t7,t8;
     if (married==true){
         abatement=7500000+2500000+nbKids*500000;
     } else{
@@ -46,16 +46,24 @@ public int getTaxesAmount(){
     }
     taxedAmount=yearlySalary-abatement;
     
-    if (taxedAmount>6000000){
-        tax=6000000*2/100;
+  
+    if (taxedAmount>120000000){
+        t1=6000000*(2/100);
         newTaxedAmount=taxedAmount-6000000;
-    } else { taxesAmount=0;}
-    if (newTaxedAmount>9000000){
-        tax=9000000*4/100;
-        newTaxedAmount=taxedAmount-(6000000+9000000);
-            
-    } else {tax=newTaxedAmount}
-    
+        t2=9000000*(4/100);
+        newTaxedAmount=taxedAmount-9000000;
+        t3=15000000*(7/100);
+        newTaxedAmount=taxedAmount-15000000;
+        t4=30000000*(11/100);
+        newTaxedAmount=taxedAmount-30000000;
+        t5=60000000*(15/100);
+        newTaxedAmount=taxedAmount-60000000;
+        t6=newTaxedAmount*(20/100);
+        
+   
+   }
+   
+   
       
         
             
