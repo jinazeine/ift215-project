@@ -17,6 +17,9 @@ public class GUITAXE extends javax.swing.JFrame {
      */
     public GUITAXE() {
         initComponents();
+         this.setLocationRelativeTo(this);
+         rootPane.setDefaultButton(btnSubmit);
+        this.setTitle("Taxes calculation");
     }
 
     /**
