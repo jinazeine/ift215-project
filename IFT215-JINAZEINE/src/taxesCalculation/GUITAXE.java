@@ -35,7 +35,7 @@ public class GUITAXE extends javax.swing.JFrame {
         lblYearlySalary = new javax.swing.JLabel();
         txtYearlySalary = new javax.swing.JTextField();
         chkMarried = new javax.swing.JCheckBox();
-        jComboBox1 = new javax.swing.JComboBox();
+        cbxNbKids = new javax.swing.JComboBox();
         lblNbKids = new javax.swing.JLabel();
         btnSubmit = new javax.swing.JButton();
         lblEmployeeInformation = new javax.swing.JLabel();
@@ -58,16 +58,21 @@ public class GUITAXE extends javax.swing.JFrame {
 
         chkMarried.setText("Married");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        cbxNbKids.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5" }));
+        cbxNbKids.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                cbxNbKidsActionPerformed(evt);
             }
         });
 
         lblNbKids.setText("  Nb Kids:");
 
         btnSubmit.setText("Submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlEmployeeInformationLayout = new javax.swing.GroupLayout(pnlEmployeeInformation);
         pnlEmployeeInformation.setLayout(pnlEmployeeInformationLayout);
@@ -76,18 +81,17 @@ public class GUITAXE extends javax.swing.JFrame {
             .addGroup(pnlEmployeeInformationLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnSubmit)
+                        .addComponent(chkMarried)))
+                .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(txtYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlEmployeeInformationLayout.createSequentialGroup()
-                        .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(chkMarried))
-                        .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(txtYearlySalary, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(pnlEmployeeInformationLayout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(lblNbKids, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addComponent(btnSubmit))
+                        .addGap(18, 18, 18)
+                        .addComponent(lblNbKids, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(cbxNbKids, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(319, Short.MAX_VALUE))
         );
         pnlEmployeeInformationLayout.setVerticalGroup(
@@ -102,7 +106,7 @@ public class GUITAXE extends javax.swing.JFrame {
                     .addComponent(lblNbKids)
                     .addGroup(pnlEmployeeInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(chkMarried)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(cbxNbKids, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(btnSubmit)
                 .addContainerGap(15, Short.MAX_VALUE))
@@ -178,14 +182,52 @@ public class GUITAXE extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void cbxNbKidsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxNbKidsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_cbxNbKidsActionPerformed
 
     private void txtYearlySalaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtYearlySalaryActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtYearlySalaryActionPerformed
 
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        // TODO add your handling code here:
+           
+        
+        int yearlySalary =Integer.parseInt(txtYearlySalary.getSelectedText());
+        
+        int nbKids = Integer.parseInt( cbxNbKids.getSelectedItem().toString());
+         cbxNbKids.removeAllItems();
+         cbxNbKids.addItem(0);
+         cbxNbKids.addItem(1);
+         cbxNbKids.addItem(2);
+         cbxNbKids.addItem(3);
+         cbxNbKids.addItem(4);
+         cbxNbKids.addItem(5);
+        boolean married;
+        married = chkMarried.isSelected();
+        
+       TaxesCalculation re = new TaxesCalculation(yearlySalary,nbKids,married);
+        
+       txtAmount.setText(re.getTaxesAmount());
+
+        
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
+       private void changeNbKidsValues(boolean married){
+           cbxNbKids.removeAllItems();
+           if (married = chkMarried.isSelected()){
+                   cbxNbKids.addItem(0);
+                   cbxNbKids.addItem(1);
+                   cbxNbKids.addItem(2);
+                   cbxNbKids.addItem(3);
+                   cbxNbKids.addItem(4);
+                   cbxNbKids.addItem(5);
+           }
+       }
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -227,8 +269,8 @@ public class GUITAXE extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubmit;
+    private javax.swing.JComboBox cbxNbKids;
     private javax.swing.JCheckBox chkMarried;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel lblAmount;
     private javax.swing.JLabel lblEmployeeInformation;
     private javax.swing.JLabel lblNbKids;
